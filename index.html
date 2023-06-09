@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./image/Screenshot (110).png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Zomato</title>
+</head>
+<body>
+    <nav>
+        <h1>Meals</h1>
+        <div class="position">
+            <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">details</a></li>
+                <li><a href="#" onclick="printFavorite()">favourite</a></li>
+            </ul>
+        </div>        
+    </nav>
+
+
+    <div class="template">
+        <div class="heading">
+            <h1 class="text-style">Search For Meal</h1> 
+            <img src="/image/logo.png" alt="">
+            <div id = 'search'>
+                <input type="search" id = 'searchText' placeholder="search for meal" >
+                <button class="button" onclick="getMealDetail()">
+                    <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
+                </button>
+            </div>          
+        </div>
+
+        <div class="heading">
+            <h1 class="text-style">List of meals</h1>
+        </div>
+        <div id="list">
+            <!-- <div class="image">
+                <div class="place">
+                    <img src="./image/Screenshot (110).png" height="50%" width="50%" alt="error">
+                </div>
+
+                <div class="display">
+                    <h4 class="text-style">meal name</h4>
+                    <button class="button height">Details</button>
+                    <button class="button width height" onclick="addFavorite(obj)">Add To Fav</button>
+                </div>                
+            </div>             -->
+        </div>        
+    </div>
+    
+    <div class="favorite display1" id="toggle">
+        <button class="position1" onclick="closeFavorite()">x</button>
+        <div class="border"><h1 class="text-style">My Favorite List</h1></div>
+        
+        <div class="favorite-list" id="fav-list">
+            <div class="fav-food">
+                <div class="fav-image">
+                    <img src="image/Screenshot (110).png" alt="error" height="80%" width="70%" >
+                </div>
+                <div class="fav-button">
+                    <h3>name </h3>
+                    <button class="button height">Details</button>
+                    <button class="button width height"><i class="fa-sharp fa-solid fa-xmark"></i>&nbsp;Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail" id="detail">
+        <button class="position1" onclick="closeDisplayDetail()">X</button>
+        <div class="detail-fav" >
+            <div class="text-detail">
+                <h2 class="text">ciken kabab</h2>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Ad, velit. Laboriosam provident officia corrupti error quos 
+                     iusto deserunt libero labore ex reiciendis consequatur itaque a
+                     periam eveniet sit, cumque nihil. Tempora.
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                     Quod velit animi commodi eius recusandae ducimus, possimus rem nihil, nobis deleniti, 
+                     laborum repudiandae repellat qui voluptatem nam aliquam vitae laudantium cumque!
+                </p>
+            </div>
+            <div class="detail-image">
+                <img src="image/logo.png" height="80%" width="50%" alt="">
+            </div>
+            <div>
+                <a href="">Watch video now</a>
+            </div>
+        </div>
+        
+    </div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
