@@ -145,7 +145,8 @@ function printFavorite(){
                     <img src="${ele.strMealThumb}" alt="error" height="80%" width="70%" >
                 </div>  
                 <div class="fav-button">
-                    <button class="button height">Details</button>
+                    <h2 class="text">${ele.strMeal}</h2>
+                    <button class="button height" onclick='displayDetails("${ele.idMeal}")'>Details</button>
                     <button class="button width height" onclick ='deletefav("${ele.idMeal}")'>Remove</button>
                 </div>
     </div>`;
@@ -168,13 +169,12 @@ function displayFavoriteList(){
                     <img src="${ele.strMealThumb}" alt="error" height="80%" width="70%" >
                 </div>  
                 <div class="fav-button">
-                    <button class="button height">Details</button>
+                    <button class="button height" onclick='displayDetails("${ele.idMeal}")'>Details</button>
                     <button class="button width height" onclick ='deletefav("${ele.idMeal}")'>Remove</button>
                 </div>
     </div>`;
 
-    ht+=text; 
-    
+    ht+=text;    
     
   }
   displayFav.innerHTML = ht;
